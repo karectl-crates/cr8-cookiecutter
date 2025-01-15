@@ -1,0 +1,17 @@
+{
+    "project_name": "CR8TOR Demo Project",
+    "__project_slug": "cr8-{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "__author": "LSC SDE",
+    "project_description": "{{ cookiecutter.project_name }} created using CR8TOR.",
+    "requester": "e.g. Prof. Jane Doe",
+    "requester_affiliation": "e.g. jane.doe@someuni.com",
+    "requester_affiliation_url": "https://someuni.com",
+    "__timestamp": "{{ cookiecutter.__timestamp }}",
+    "__prompts__": {
+        "project_name": "Enter short name for project",
+        "project_description": "Enter project description",
+        "requester": "Name of Requester",
+        "requester_affiliation": "Requester Organisation",
+        "requester_affiliation_url": "Website for Requester Organisation"
+    }
+}
