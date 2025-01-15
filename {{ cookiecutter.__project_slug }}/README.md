@@ -6,3 +6,4 @@
 
 _Created at {{ cookiecutter.__timestamp }}_
 
+_Created using {{ cookiecutter.__cr8_cc_template }}

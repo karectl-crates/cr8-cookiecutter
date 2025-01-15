@@ -7,6 +7,7 @@
     "requester_affiliation": "e.g. jane.doe@someuni.com",
     "requester_affiliation_url": "https://someuni.com",
     "__timestamp": "{{ cookiecutter.__timestamp }}",
+    "__cr8_cc_template": "{{ cookiecutter.__cr8_cc_template }}",
     "__prompts__": {
         "project_name": "Enter short name for project",
         "project_description": "Enter project description",
