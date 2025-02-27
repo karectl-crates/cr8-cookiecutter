@@ -1,0 +1,22 @@
+[[metadata_sources]]
+file = "metadata/dataset_1.toml"
+
+[project]
+description = "{{ cookiecutter.project_description }}"
+reference = "cr8-{{ cookiecutter.__project_slug }}"
+name = "{{ cookiecutter.project_name }}"
+project_name = "{{ cookiecutter.project_name }}"
+destination_type = "{{ cookiecutter.destination_type }}"
+destination_format = "{{ cookiecutter.destination_format }}"
+
+[repository]
+codeRepository = "https://github.com/{{ cookiecutter.github_organization }}/"
+description = "This RO-Crate is versioned and stored in a Git repository on GitHub."
+name = "Github Repo"
+
+[requesting_agent]
+name = "{{ cookiecutter.requester }}"
+
+[requesting_agent.affiliation]
+name = "{{ cookiecutter.requester_affiliation }}"
+url = "{{ cookiecutter.requester_affiliation_url }}"

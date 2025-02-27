@@ -6,13 +6,19 @@
     "requester": "e.g. Prof. Jane Doe",
     "requester_affiliation": "e.g. jane.doe@someuni.com",
     "requester_affiliation_url": "https://someuni.com",
+    "github_organization": "e.g. my-github-org",
+    "destination_type": ["LSC", "NW"],
+    "destination_format": ["DUCKDB", "CSV"],
     "__timestamp": "{{ cookiecutter.__timestamp }}",
     "__cr8_cc_template": "{{ cookiecutter.__cr8_cc_template }}",
     "__prompts__": {
+        "github_organization": "Enter GitHub organization name",
         "project_name": "Enter short name for project",
         "project_description": "Enter project description",
         "requester": "Name of Requester",
         "requester_affiliation": "Requester Organisation",
-        "requester_affiliation_url": "Website for Requester Organisation"
+        "requester_affiliation_url": "Website for Requester Organisation",
+        "destination_type": "Choose destination type (LSC or NW)",
+        "destination_format": "Choose destination type (DUCKDB or CSV)"
     }
 }
