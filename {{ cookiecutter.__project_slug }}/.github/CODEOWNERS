@@ -1,0 +1,5 @@
+# default owner
+# * @example_user @{{ cookiecutter.github_organization }}/example_team
+
+# Ensure any changes to the following directories are approved by Organisation owners
+/.github/ @{{ cookiecutter.github_organization }}/devops_admin
