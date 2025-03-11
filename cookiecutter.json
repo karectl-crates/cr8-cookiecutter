@@ -9,7 +9,7 @@
     "github_organization": "e.g. my-github-org",
     "destination_type": ["LSC", "NW"],
     "destination_format": ["DUCKDB", "CSV"],
-    "environment": ["DEV", "TEST", "PROD"],
+    "environment": ["PROD", "DEV", "TEST"],
     "__timestamp": "{{ cookiecutter.__timestamp }}",
     "__cr8_cc_template": "{{ cookiecutter.__cr8_cc_template }}",
     "__prompts__": {
@@ -21,9 +21,6 @@
         "requester_affiliation_url": "Website for Requester Organisation",
         "destination_type": "Choose destination type (LSC or NW)",
         "destination_format": "Choose destination format (DUCKDB or CSV)",
-        "environment": "Choose target enviornment (DEV, TEST or PROD)"
-    },
-    "default_context": {
-        "environment": "PROD"
+        "environment": "Choose target enviornment (PROD, DEV, TEST)"
     }
 }
