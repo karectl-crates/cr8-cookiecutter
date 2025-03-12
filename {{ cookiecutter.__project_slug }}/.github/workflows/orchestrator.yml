@@ -9,9 +9,12 @@ concurrency:
 {% endraw %}
 jobs:
     RunOrchestrator:
-      uses: lsc-sde-crates/cr8tor/.github/workflows/orchestrator.yml@develop
+      uses: lsc-sde-crates/cr8tor/.github/workflows/orchestrator.yml{%- if cookiecutter.__github_cr8tor_branch -%}@{{cookiecutter.__github_cr8tor_branch}}{% endif %}
       #uses: ./../cr8tor/.github/workflows/orchestrator.yml
       name: Run Orchestrator
       with:
         environment: {{ cookiecutter.environment }}
+        {%+ if cookiecutter.__github_cr8tor_branch -%}
+        cr8tor_branch: {{cookiecutter.__github_cr8tor_branch}}
+        {% endif %}
       secrets: inherit
