@@ -14,7 +14,7 @@ concurrency:
 {% endraw %}
 jobs:
     RunOrchestrator:
-      uses: lsc-sde-crates/cr8tor/.github/workflows/orchestrator.yml{%- if cookiecutter.__github_cr8tor_branch -%}@{{cookiecutter.__github_cr8tor_branch}}{% endif %}
+      uses: lsc-sde-crates/cr8tor/.github/workflows/orchestrator.yml@{%- if cookiecutter.__github_cr8tor_branch -%}{{cookiecutter.__github_cr8tor_branch}}{%- else -%}main{% endif %}
       #uses: ./../cr8tor/.github/workflows/orchestrator.yml
       name: Run Orchestrator
       with:
