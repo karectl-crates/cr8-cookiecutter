@@ -10,4 +10,4 @@ _Created using {{ cookiecutter.__cr8_cc_template }}
 
 ## User Guide
 
-The User Guide documentation is maintained at <https://lsc-sde-crates.github.io/cr8tor/>.
+The User Guide documentation is maintained at <https://{{ cookiecutter.github_organization }}.github.io/cr8tor/>.
