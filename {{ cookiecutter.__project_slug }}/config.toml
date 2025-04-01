@@ -1,5 +1,5 @@
 [bagit-info]
-Source-Organization = 'LSC SDE'
-Organization-Address = 'Lancashire Teaching Hospitals NHS Trust, PR2 9HT'
-Contact-Name = "LSC SDE Program Team"
-Contact-Email = "lsc.sde@test.com"
+Source-Organization = '{{ cookiecutter.__source_organisation }}'
+Organization-Address = '{{ cookiecutter.__organisation_address }}'
+Contact-Name = "{{ cookiecutter.__contact_team }}"
+Contact-Email = "{{ cookiecutter.__contact_email }}"
