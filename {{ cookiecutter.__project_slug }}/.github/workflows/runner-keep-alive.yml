@@ -6,12 +6,15 @@ on:
 
 jobs:
   Keep-Alive:
+{% raw %}
     runs-on: ${{ matrix.runner }}
-
+{% endraw %}
     strategy:
       matrix:
         runner: [{{ cookiecutter.environment }}-cr8tor-vm]
 
     steps:
       - name: Print Message
+{% raw %}
         run: echo "Keeping Runner ${{ matrix.runner }} Alive"
+{% endraw %}
