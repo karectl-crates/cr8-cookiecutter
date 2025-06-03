@@ -11,7 +11,7 @@ jobs:
 {% endraw %}
     strategy:
       matrix:
-        runner: [{{ cookiecutter.environment }}-cr8tor-vm]
+        runner: [{{ cookiecutter.environment.lower() }}-cr8tor-vm]
 
     steps:
       - name: Print Message
