@@ -2,19 +2,13 @@ name: Keep Runner Alive Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */240 * * *" # Runs every 10 days
+    - cron: "0 0 * * *" # Runs every 1 day at 12:00 AM UTC
 
 jobs:
   Keep-Alive:
-{% raw %}
-    runs-on: ${{ matrix.runner }}
-{% endraw %}
-    strategy:
-      matrix:
-        runner: [{{ cookiecutter.environment.lower() }}-cr8tor-vm]
+    runs-on: [{{ cookiecutter.environment.lower() }}-cr8tor-vm]
 
     steps:
-      - name: Print Message
-{% raw %}
-        run: echo "Keeping Runner ${{ matrix.runner }} Alive"
-{% endraw %}
+      - name: Keep Alive
+        shell: pwsh
+        run: Write-Host "Keeping the runner alive..."
