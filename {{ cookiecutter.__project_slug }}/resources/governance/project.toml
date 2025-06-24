@@ -6,8 +6,11 @@ description = "{{ cookiecutter.project_description }}"
 reference = "{{ cookiecutter.__project_slug }}"
 name = "{{ cookiecutter.project_name }}"
 project_name = "{{ cookiecutter.project_name }}"
-destination_type = "{{ cookiecutter.destination_type }}"
-destination_format = "{{ cookiecutter.destination_format }}"
+
+[project.destination]
+type = "{{ cookiecutter.destination_type }}"
+name = "{{ cookiecutter.__destination_name }}"
+format = "{{ cookiecutter.destination_format }}"
 
 [repository]
 codeRepository = "https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.__project_slug }}"

@@ -11,8 +11,10 @@
     "requester_affiliation": "e.g. jane.doe@someuni.com",
     "requester_affiliation_url": "https://someuni.com",
     "github_organization": "e.g. my-github-org",
-    "destination_type": ["LSC", "NW"],
-    "destination_format": ["DUCKDB", "CSV"],
+    "destination_type": ["filestore", "postgresql"],
+    "destination_name": "e.g. LSC",
+    "__destination_name": "{{ cookiecutter.destination_name.lower().replace(' ', '') }}",
+    "destination_format": ["duckdb", "csv"],
     "environment": ["PROD", "DEV", "TEST"],
     "__github_cr8tor_branch": "main",
     "__timestamp": "{{ cookiecutter.__timestamp }}",
@@ -24,7 +26,8 @@
         "requester": "Name of Requester",
         "requester_affiliation": "Requester Organisation",
         "requester_affiliation_url": "Website for Requester Organisation",
-        "destination_type": "Choose destination type (LSC or NW)",
+        "destination_type": "Choose destination type (filestore or postgresql)",
+        "destination_name": "Type destination name (single word, no spaces). Mandatory for filestore, optional for postgresql",
         "destination_format": "Choose destination format (DUCKDB or CSV)"
     }
 }
