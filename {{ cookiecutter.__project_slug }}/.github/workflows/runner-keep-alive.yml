@@ -10,5 +10,5 @@ jobs:
 
     steps:
       - name: Keep Alive
-        shell: pwsh
-        run: Write-Host "Keeping the runner alive..."
+        shell: "{% if cookiecutter.runner_os == 'Linux' %}bash{% else %}pwsh{% endif %}"
+        run: "{% if cookiecutter.runner_os == 'Linux' %}echo 'Keeping the runner alive...'{% else %}Write-Host 'Keeping the runner alive...'{% endif %}"
