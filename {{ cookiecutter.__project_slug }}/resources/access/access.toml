@@ -1,6 +1,6 @@
 [source]
 name = "Cr8tor PoC Connection"
-type = "DatabricksSQL"
+type = "databrickssql"
 host_url = "https://<databricks_workspace_id>.azuredatabricks.net"
 http_path = "/sql/1.0/warehouses/<sql_warehouse_id>"
 port = 443
