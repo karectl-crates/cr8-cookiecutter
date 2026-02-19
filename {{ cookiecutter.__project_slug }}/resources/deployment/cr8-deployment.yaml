@@ -2,14 +2,22 @@ environment:
   name: "{{ cookiecutter.environment | lower }}-tre"
 
 resources:
-  - name: jupyterhub-main
+  - name: jupyterhub
     resource_type: Jupyter
     url: https://jupyter.example.org
     enabled: true
     auth: oidc
 
-  - name: keycloak-main
-    resource_type: Keycloak
-    url: https://auth.example.org
+  - name: guacamole
+    resource_type: VDI
     enabled: true
-    realm: "{{ cookiecutter.environment | lower }}-tre"
+
+  - name: rstudio
+    resource_type: RStudio
+    url: https://rstudio.example.org
+    enabled: false
+
+  - name: gitea
+    resource_type: Gitea
+    url: https://gitea.example.org
+    enabled: false
