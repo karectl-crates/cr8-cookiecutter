@@ -8,7 +8,7 @@
     "__contact_email": "lsc.sde@test.com",
     "project_description": "{{ cookiecutter.project_name }} created using CR8TOR.",
     "requester": "e.g. Prof. Jane Doe",
-    "requester_email": "requester@example.org",
+    "requester_email": "e.g. requester@example.org",
     "requester_affiliation": "e.g. Lancaster University",
     "github_organization": "e.g. my-github-org",
     "destination_type": ["filestore", "postgresql"],
