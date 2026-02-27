@@ -1,0 +1,35 @@
+environment:
+  name: "{{ cookiecutter.environment | lower }}-tre"
+
+resources:
+  - name: jupyterhub
+    resource_type: Jupyter
+    url: https://jupyter.example.org
+    enabled: true
+    auth: oidc
+    storage:
+      default_notebook_size: "5Gi"
+      persist: false
+
+  - name: guacamole
+    resource_type: VDI
+    enabled: true
+    scheduling:
+      resources:
+        requests_cpu: "500m"
+        requests_memory: "1Gi"
+        limits_cpu: "2"
+        limits_memory: "4Gi"
+    storage:
+      default_vdi_size: "5Gi"
+      persist: false
+
+  - name: rstudio
+    resource_type: RStudio
+    url: https://rstudio.example.org
+    enabled: false
+
+  - name: gitea
+    resource_type: Gitea
+    url: https://gitea.example.org
+    enabled: false
